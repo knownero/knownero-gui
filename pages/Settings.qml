@@ -262,7 +262,7 @@ Rectangle {
                     daemonPortText: {
                         var node_split = persistentSettings.bootstrapNodeAddress.split(":");
                         if(node_split.length == 2){
-                            (node_split[1].trim() == "") ? "18081" : node_split[1];
+                            (node_split[1].trim() == "") ? "4368" : node_split[1];
                         } else {
                             return ""
                         }
@@ -293,7 +293,7 @@ Rectangle {
 
                     property var rna: persistentSettings.remoteNodeAddress
                     daemonAddrText: rna.search(":") != -1 ? rna.split(":")[0].trim() : ""
-                    daemonPortText: rna.search(":") != -1 ? (rna.split(":")[1].trim() == "") ? "18081" : rna.split(":")[1] : ""
+                    daemonPortText: rna.search(":") != -1 ? (rna.split(":")[1].trim() == "") ? "4368" : rna.split(":")[1] : ""
                     onEditingFinished: {
                         persistentSettings.remoteNodeAddress = remoteNodeEdit.getAddress();
                         console.log("setting remote node to " + persistentSettings.remoteNodeAddress)
@@ -540,7 +540,7 @@ Rectangle {
 
                 ListModel {
                      id: logLevel
-                     ListElement { name: "none"; column1: "0"; }
+                     ListElement { name: "know"; column1: "0"; }
                      ListElement { column1: "1"; }
                      ListElement { column1: "2"; }
                      ListElement { column1: "3"; }
@@ -642,13 +642,13 @@ Rectangle {
             TextBlock {
                 id: guiMoneroVersion
                 font.pixelSize: 14
-                text: qsTr("Embedded Monero version: ") + translationManager.emptyString
+                text: qsTr("Embedded Knownero version: ") + translationManager.emptyString
             }
 
             TextBlock {
                 font.pixelSize: 14
                 font.bold: true
-                text: Version.GUI_MONERO_VERSION + translationManager.emptyString
+                text: Version.GUI_KNOWNERO_VERSION + translationManager.emptyString
             }
 
             TextBlock {
@@ -686,7 +686,7 @@ Rectangle {
                         if(Utils.isNumeric(_restoreHeight)){
                             _restoreHeight = parseInt(_restoreHeight);
                             if(_restoreHeight >= 0) {
-                                currentWallet.walletCreationHeight = restoreHeightEdit.text
+                                currentWallet.walletCreationHeight = _restoreHeight
                                 // Restore height is saved in .keys file. Set password to trigger rewrite.
                                 currentWallet.setPassword(appWindow.walletPassword)
 

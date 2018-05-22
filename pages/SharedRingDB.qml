@@ -72,7 +72,7 @@ Rectangle {
         id: mainLayout
         anchors.margins: (isMobile)? 17 : 20
         anchors.topMargin: 40 * scaleRatio
-  
+
         anchors.left: parent.left
         anchors.top: parent.top
         anchors.right: parent.right
@@ -264,7 +264,7 @@ Rectangle {
             textFormat: Text.RichText
             font.family: Style.fontRegular.name
             font.pixelSize: 14 * scaleRatio
-            text: qsTr("This records rings used by outputs spent on Monero on a key reusing chain, so that the same ring may be reused to avoid privacy issues.") + translationManager.emptyString
+            text: qsTr("This records rings used by outputs spent on Knownero on a key reusing chain, so that the same ring may be reused to avoid privacy issues.") + translationManager.emptyString
             wrapMode: Text.Wrap
             Layout.fillWidth: true;
             color: Style.defaultFontColor

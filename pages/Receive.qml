@@ -409,7 +409,7 @@ Rectangle {
                 text: qsTr("Advanced options") + translationManager.emptyString
             }
         }
-        
+
         GridLayout {
             id: advancedRow
             columns: (isMobile)? 1 : 2

@@ -196,7 +196,7 @@ Rectangle {
                       validator: DoubleValidator {
                           bottom: 0.0
                           top: 18446744.073709551615
-                          decimals: 12
+                          decimals: 2
                           notation: DoubleValidator.StandardNotation
                           locale: "C"
                       }
@@ -225,9 +225,9 @@ Rectangle {
                    id: priorityModelV5
 
                    ListElement { column1: qsTr("Default") ; column2: ""; priority: 0}
-                   ListElement { column1: qsTr("Slow (x0.25 fee)") ; column2: ""; priority: 1}
-                   ListElement { column1: qsTr("Normal (x1 fee)") ; column2: ""; priority: 2 }
-                   ListElement { column1: qsTr("Fast (x5 fee)") ; column2: ""; priority: 3 }
+                   ListElement { column1: qsTr("Economic") ; column2: ""; priority: 1}
+                   ListElement { column1: qsTr("Normal") ; column2: ""; priority: 2 }
+                   ListElement { column1: qsTr("High priority") ; column2: ""; priority: 3 }
                    ListElement { column1: qsTr("Fastest (x41.5 fee)")  ; column2: "";  priority: 4 }
                }
 
@@ -258,7 +258,7 @@ Rectangle {
                 Address <font size='2'>  ( </font> <a href='#'>Address book</a><font size='2'> )</font>")
                 + translationManager.emptyString
               labelButtonText: qsTr("Resolve") + translationManager.emptyString
-              placeholderText: "4.. / 8.."
+              placeholderText: "B..."
               onInputLabelLinkActivated: { appWindow.showPageRequest("AddressBook") }
           }
 
@@ -619,7 +619,7 @@ Rectangle {
                 informationPopup.open();
             } else {
                 informationPopup.title = qsTr("Information") + translationManager.emptyString
-                informationPopup.text  = qsTr("Monero sent successfully") + translationManager.emptyString
+                informationPopup.text  = qsTr("Knownero sent successfully") + translationManager.emptyString
                 informationPopup.icon  = StandardIcon.Information
                 informationPopup.onCloseCallback = null
                 informationPopup.open();

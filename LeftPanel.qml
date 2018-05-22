@@ -252,8 +252,8 @@ Rectangle {
 
         Flickable {
             id:flicker
-            contentHeight: (progressBar.visible)? menuColumn.height + separator.height + 
-                networkStatus.height + progressBar.height + daemonProgressBar.height : 
+            contentHeight: (progressBar.visible)? menuColumn.height + separator.height +
+                networkStatus.height + progressBar.height + daemonProgressBar.height :
                 menuColumn.height + separator.height + networkStatus.height
             anchors.fill: parent
             clip: true

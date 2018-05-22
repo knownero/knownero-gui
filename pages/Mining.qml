@@ -68,7 +68,7 @@ Rectangle {
                 text: qsTr("(only available for local daemons)")
                 visible: !walletManager.isDaemonLocal(appWindow.currentDaemonAddress)
             }
-            
+
             Label {
                 id: soloSyncedLabel
                 fontSize: 18
