@@ -1,3 +1,4 @@
 [submodule "knownero"]
     path = knownero
-    url=https://github.com/knownero/knownero
+    url = https://github.com/knownero/knownero
+    ignore = all
